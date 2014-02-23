@@ -7,16 +7,16 @@
 
 #include<stdio.h>
 
-typedef struct BinaryTreeNode{
+typedef struct BinaryTreeNode {
     int key;
     struct BinaryTreeNode * left;
     struct BinaryTreeNode * right;
-}BinaryTree,* BTree;
+} BinaryTree, * BTree;
 
-BTree InsertBTreeRec(BTree CBtree,int key);
-BTree InsertBTreeUnrec(BTree CBtree,int key);
-BTree BTreeFindRec(BTree CBtree,int key);
-BTree BTreeFindUnrec(BTree CBtree,int key);
+BTree InsertBTreeRec(BTree cbtree, int key);
+BTree InsertBTreeUnrec(BTree cbtree, int key);
+BTree BTreeFindRec(BTree cbtree, int key);
+BTree BTreeFindUnrec(BTree cbtree, int key);
 
 
 

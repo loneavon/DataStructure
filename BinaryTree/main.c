@@ -9,22 +9,21 @@
 #include"BinaryTree.h"
 
 void PreOrder(BTree root) {
-    if(root != NULL) {
+    if (root != NULL) {
         PreOrder(root->left);
         PreOrder(root->right);
         printf("%d\n",root->key);
     }
 }
     
-BTree ctree=NULL;
+BTree ctree = NULL;
 
 int main(void) {
 
-    BTree ctr=NULL;
+    BTree ctr = NULL;
     int a;
-    int i=0;
 
-    for(;i<=3;i++) {
+    for (int i = 0; i <= 3; i++) {
         scanf("%d",&a);
         ctree = InsertBTreeRec(ctree,a);
     }
@@ -32,10 +31,14 @@ int main(void) {
 
 //    PreOrder(ctree);
 
-    ctr=BTreeFindRec(ctree,2);
-    printf("RecFindNum:%d\n",*ctr);
-    ctr=BTreeFindUnrec(ctree,3);
-    printf("UnrecFindNum:%d\n",*ctr);
+    ctr = BTreeFindRec(ctree,2);
+    if (ctr) {
+        printf("RecFindNum:%d\n",*ctr);
+    }
+    ctr = BTreeFindUnrec(ctree,3);
+    if (ctr) {
+        printf("UnrecFindNum:%d\n",*ctr);
+    }
 
     return 0;
 }
